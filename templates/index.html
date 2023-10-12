@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mushroom Classifier</title>
+</head>
+<body>
+    <h1>Mushroom Classifier</h1>
+    <p>Enter mushroom characteristics to classify as Poisonous or Edible:</p>
+
+    <form method="POST" action="/">
+        <table>
+            <tr>
+                <td><label for="cap-shape">Cap Shape:</label></td>
+                <td><input type="text" name="cap-shape" required></td>
+            </tr>
+            <tr>
+                <td><label for="cap-surface">Cap Surface:</label></td>
+                <td><input type="text" name="cap-surface" required></td>
+            </tr>
+            <tr>
+                <td><label for="cap-color">Cap Color:</label></td>
+                <td><input type="text" name="cap-color" required></td>
+            </tr>
+            <tr>
+                <td><label for="bruises">Bruises:</label></td>
+                <td><input type="text" name="bruises" required></td>
+            </tr>
+            <tr>
+                <td><label for="odor">Odor:</label></td>
+                <td><input type="text" name="odor" required></td>
+            </tr>
+            <tr>
+                <td><label for="gill-attachment">Gill Attachment:</label></td>
+                <td><input type="text" name="gill-attachment" required></td>
+            </tr>
+            <tr>
+                <td><label for="gill-spacing">Gill Spacing:</label></td>
+                <td><input type="text" name="gill-spacing" required></td>
+            </tr>
+            <tr>
+                <td><label for="gill-size">Gill Size:</label></td>
+                <td><input type="text" name="gill-size" required></td>
+            </tr>
+            <tr>
+                <td><label for="gill-color">Gill Color:</label></td>
+                <td><input type="text" name="gill-color" required></td>
+            </tr>
+            <tr>
+                <td><label for="stalk-shape">Stalk Shape:</label></td>
+                <td><input type="text" name="stalk-shape" required></td>
+            </tr>
+            <tr>
+                <td><label for="stalk-root">Stalk Root:</label></td>
+                <td><input type="text" name="stalk-root" required></td>
+            </tr>
+            <tr>
+                <td><label for="stalk-surface-above-ring">Stalk Surface Above Ring:</label></td>
+                <td><input type="text" name="stalk-surface-above-ring" required></td>
+            </tr>
+            <tr>
+                <td><label for="stalk-surface-below-ring">Stalk Surface Below Ring:</label></td>
+                <td><input type="text" name="stalk-surface-below-ring" required></td>
+            </tr>
+            <tr>
+                <td><label for="stalk-color-above-ring">Stalk Color Above Ring:</label></td>
+                <td><input type="text" name="stalk-color-above-ring" required></td>
+            </tr>
+            <tr>
+                <td><label for="stalk-color-below-ring">Stalk Color Below Ring:</label></td>
+                <td><input type="text" name="stalk-color-below-ring" required></td>
+            </tr>
+            <tr>
+                <td><label for="veil-type">Veil Type:</label></td>
+                <td><input type="text" name="veil-type" required></td>
+            </tr>
+            <tr>
+                <td><label for="veil-color">Veil Color:</label></td>
+                <td><input type="text" name="veil-color" required></td>
+            </tr>
+            <tr>
+                <td><label for="ring-number">Ring Number:</label></td>
+                <td><input type="text" name="ring-number" required></td>
+            </tr>
+            <tr>
+                <td><label for="ring-type">Ring Type:</label></td>
+                <td><input type="text" name="ring-type" required></td>
+            </tr>
+            <tr>
+                <td><label for="spore-print-color">Spore Print Color:</label></td>
+                <td><input type="text" name="spore-print-color" required></td>
+            </tr>
+            <tr>
+                <td><label for="population">Population:</label></td>
+                <td><input type="text" name="population" required></td>
+            </tr>
+            <tr>
+                <td><label for="habitat">Habitat:</label></td>
+                <td><input type="text" name="habitat" required></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Classify">
+    </form>
+
+    {% if result %}
+    <p>Classification Result: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
