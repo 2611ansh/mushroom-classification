@@ -8,6 +8,7 @@ app = Flask(__name__)
 le = joblib.load('artifacts/label_encoder.pkl')
 model = joblib.load('artifacts/random_forest_model.pkl')
 
+
 @app.route('/', methods=['GET', 'POST'])
 def classify_mushroom():
     if request.method == 'POST':
