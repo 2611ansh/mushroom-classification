@@ -19,7 +19,7 @@ def classify_mushroom():
         try:
             for col in mushroom_data.columns:
                 if mushroom_data[col].dtype == 'object':
-                    mushroom_data_encoded[col] = le.transform(mushroom_data[col])
+                    mushroom_data_encoded[col] = le.fit_transform(mushroom_data[col])
         except KeyError as e:
             return render_template('index.html', result=f'Invalid input: {e}')
 
